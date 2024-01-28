@@ -8,8 +8,7 @@ def test_push():
 
     python_stack = []
     python_stack.append(1) 
-    python_stack.append(2) 
-    
+    python_stack.append(2)
     compare = (my_stack == python_stack)
     # Assert
     assert compare == True

@@ -1,6 +1,8 @@
 # STACKS
 # A stack data structure allows access to only one data item in the collection: the last item inserted.
-# A Stack is a data structure that follows the LIFO(Last In First Out) principle. 
+# A Stack is a data structure that follows the LIFO(Last In First Out) principle.
+import test_stack
+
 
 # A stack has two simple operations:
 # push - It adds an element to the top (i.e., end) of the stack.
@@ -20,6 +22,12 @@ class MyStack(object):
     def push(self, item): 
         '''Insert item at top of stack'''
         ## ADD YOUR CODE
+        if self.__top >= self.__maxSize-1:
+            return -1
+        else:
+            self.__top += 1
+            self.__stackList[self.__top]=item
+            return self.__top
         
 
     # Exercise 02: implement a function that removes the top item from stack. 
@@ -27,6 +35,20 @@ class MyStack(object):
     def pop(self):    
       '''Remove top item from stack'''
       ##ADD YOUR CODE
+      if self.__top <= -1:
+          return -1
+      else:
+          item = self.__stackList[self.__top]
+          self.__stackList[self.__top] = None
+          self.__top -=1
+          return item
 
-    
+def main():
+    test_stack.test_push()
+    test_stack.test_pop_size()
+    test_stack.test_pop_empty()
+    test_stack.test_push_size()
+
+if __name__ == "__main__":
+    main()
 
