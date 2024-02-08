@@ -36,7 +36,7 @@ def test_dequeue():
     # Assert
     assert item == item2
 
-def test_dequeue():
+def test_dequeue2():
     queue_instance = q.MyQueue(2)
     rear = queue_instance.enqueue(1)
     rear = queue_instance.enqueue(2)

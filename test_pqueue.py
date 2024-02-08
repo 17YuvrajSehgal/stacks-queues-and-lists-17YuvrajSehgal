@@ -7,7 +7,7 @@ def test_enqueue():
     rear = queue_instance.enqueue(item1)
     rear = queue_instance.enqueue(item2)
     my_queue = queue_instance.getQueue()
-    
+
     py_queue = [item2,item1]
     # Assert
     assert my_queue == py_queue
@@ -51,7 +51,7 @@ def test_dequeue():
     assert item.getValue() == item2.getValue()
     assert item.getPriority() == item2.getPriority()
 
-def test_dequeue():
+def test_dequeue2():
     queue_instance = q.MyPriorityQueue(2)
     item1 = q.MyItem(1, 0)
     item2 = q.MyItem(2, 1)
